@@ -47,22 +47,22 @@
     }
   ],
   "dependencies": {
-    "child-process": "^1.0.2",
-    "npm-which": "^3.0.1",
-    "vscode-debugadapter": "1.36.0",
-    "vscode-debugprotocol": "1.36.0"
+    "@types/node": "^20.2.5",
+    "@vscode/debugadapter": "^1.59.0",
+    "@vscode/debugprotocol": "^1.59.0",
+    "node-esm-loader": "^0.2.3",
+    "promisify-child-process": "^4.1.1",
+    "vscode": "^1.1.37",
+    "which": "^3.0.1"
   },
   "devDependencies": {
-    "@types/mocha": "5.2.7",
-    "@types/node": "10.14.17",
-    "jsdoctest": "1.7.1",
+    "@types/vscode": "^1.78.1",
+    "@vscode/debugadapter-testsupport": "^1.59.0",
+    "@vscode/vsce": "^2.19.0",
+    "eslint": "^8.41.0",
     "mocha": "6.2.0",
     "standard-version": "^7.0.0",
-    "tslint": "5.19.0",
-    "typescript": "3.6.2",
-    "vsce": "1.66.0",
-    "vscode": "1.1.36",
-    "vscode-debugadapter-testsupport": "1.36.0"
+    "typescript": "3.6.2"
   },
   "scripts": {
     "prepublish": "tsc -p ./src",
@@ -221,6 +221,9 @@
             }
           }
         ],
+        "engines": {
+          "vscode": "^1.1.36"
+        },
         "variables": {
           "AskForScriptName": "extension.zsh-debug.getProgramName",
           "SelectScriptName": "extension.zsh-debug.selectProgramName"
